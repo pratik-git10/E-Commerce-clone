@@ -1,36 +1,28 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# E-Commerce SaaS Application
 
-## Getting Started
+This project is an E-Commerce platform built with [`create-next-app`](https://nextjs.org/docs/api-reference/create-next-app) and designed to be used as a SaaS (Software as a Service) application for e-commerce businesses.
 
-First, run the development server:
+## Tech Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Framework**: [Next.js](https://nextjs.org/)
+- **Frontend**: Next.js
+- **Backend**: Node.js, Express
+- **Database**: MySQL
+- **API**: REST API
+- **Authentication**: NextAuth.js (JWT and OAuth) / clerk auth(https://clerk.com/)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Seller Account Management
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Sellers can create and manage their accounts.
+- Manage orders, inventory, and other backend operations through a dedicated dashboard.
 
-## Learn More
+### Order and Payment Tracking
 
-To learn more about Next.js, take a look at the following resources:
+- Track order status and shipping details in real-time.
+- Payment tracking for completed and pending orders.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Multi-Store Backend API
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- A single backend API that supports multiple stores, making it easy to scale and manage multiple e-commerce sites with the same backend.
