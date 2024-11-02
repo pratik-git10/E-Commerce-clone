@@ -23,7 +23,7 @@ export async function PATCH(
       return new NextResponse("Store id is required", { status: 400 });
     }
 
-    const store = prismadb.store.updateMany({
+    const store = await prismadb.store.updateMany({
       where: {
         id: params.storeId,
         userId,
@@ -55,13 +55,13 @@ export async function DELETE(
       return new NextResponse("Store id is required", { status: 400 });
     }
 
-    const store = prismadb.store.deleteMany({
+    const store = await prismadb.store.deleteMany({
       where: {
         id: params.storeId,
         userId,
       },
     });
-
+    console.log("store deleted");
     return NextResponse.json(store);
   } catch (error) {
     console.log("[STORES_DELETE]", error);
