@@ -56,7 +56,8 @@ export const BillboardForm: React.FC<BillboardProps> = ({ initialData }) => {
       imageUrl: "",
     },
   });
-  //////////////////////////onSubmit/////////////
+
+  // OnSubmit Function
   const onSubmit = async (data: BillboardFormValues) => {
     try {
       setLoading(true);
@@ -77,7 +78,7 @@ export const BillboardForm: React.FC<BillboardProps> = ({ initialData }) => {
       setLoading(false);
     }
   };
-
+  // onDelete Function
   const onDelete = async () => {
     try {
       setLoading(true);
@@ -85,7 +86,7 @@ export const BillboardForm: React.FC<BillboardProps> = ({ initialData }) => {
         `/api/${params.storeId}/billboards/${params.billboardId}`
       );
       router.refresh();
-      router.push("/");
+      router.push(`/${params.storeId}/billboards`);
       toast.success("Billboard Deleted Successfully.");
     } catch (error) {
       toast.error(
@@ -166,7 +167,6 @@ export const BillboardForm: React.FC<BillboardProps> = ({ initialData }) => {
           </Button>
         </form>
       </Form>
-      <Separator />
     </>
   );
 };
