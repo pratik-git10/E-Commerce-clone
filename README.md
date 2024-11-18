@@ -26,3 +26,9 @@ This project is an E-Commerce platform built with [`create-next-app`](https://ne
 ### Multi-Store Backend API
 
 - A single backend API that supports multiple stores, making it easy to scale and manage multiple e-commerce sites with the same backend.
+
+### For development purpose
+
+<!-- npm run dev -->
+<!-- npx prisma generate -->
+<!-- npx prisma db push -->
