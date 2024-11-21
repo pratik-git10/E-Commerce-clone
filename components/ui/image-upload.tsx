@@ -7,6 +7,12 @@ import Image from "next/image";
 
 import { CldUploadWidget } from "next-cloudinary";
 
+interface UploadResult {
+  info: {
+    secure_url: string;
+  };
+}
+
 interface ImageUploadProps {
   disabled?: boolean;
   onChange: (value: string) => void;
@@ -26,8 +32,15 @@ const ImageUpload: React.FC<ImageUploadProps> = ({
     setIsMounted(true);
   }, []);
 
-  const onUpload = (result: any) => {
-    onChange(result.info.secure_url);
+  // changes made in linting
+  // const onUpload = (result: UploadResult) => {
+  //   onChange(result.info.secure_url);
+  // };
+
+  const onUpload = (result: unknown) => {
+    // Type assertion (adjust the result type if needed)
+    const uploadResult = result as UploadResult;
+    onChange(uploadResult.info.secure_url);
   };
 
   if (!isMounted) {
@@ -56,7 +69,10 @@ const ImageUpload: React.FC<ImageUploadProps> = ({
           </div>
         ))}
       </div>
-      <CldUploadWidget onSuccess={onUpload} uploadPreset="nl2k8oq0">
+      <CldUploadWidget
+        onSuccess={(result) => onUpload(result)} //changes made in linting
+        uploadPreset="nl2k8oq0"
+      >
         {({ open }) => {
           const onClick = () => {
             open();
