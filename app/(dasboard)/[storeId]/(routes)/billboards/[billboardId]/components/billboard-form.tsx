@@ -72,7 +72,8 @@ export const BillboardForm: React.FC<BillboardProps> = ({ initialData }) => {
       router.refresh();
       router.push(`/${params.storeId}/billboards`);
       toast.success(toastMessage);
-    } catch {
+    } catch (error) {
+      console.log("Something went wrong", error);
       toast.error("Something went wrong");
     } finally {
       setLoading(false);
@@ -88,7 +89,11 @@ export const BillboardForm: React.FC<BillboardProps> = ({ initialData }) => {
       router.refresh();
       router.push(`/${params.storeId}/billboards`);
       toast.success("Billboard Deleted Successfully.");
-    } catch {
+    } catch (error) {
+      console.log(
+        "Make sure you deleted all Categories using this billboard first.",
+        error
+      );
       toast.error(
         "Make sure you deleted all Categories using this billboard first."
       );

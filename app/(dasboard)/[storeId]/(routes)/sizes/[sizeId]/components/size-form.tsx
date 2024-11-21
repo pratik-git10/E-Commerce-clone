@@ -71,7 +71,8 @@ export const SizeForm: React.FC<SizeFormProps> = ({ initialData }) => {
       router.refresh();
       router.push(`/${params.storeId}/sizes`);
       toast.success(toastMessage);
-    } catch {
+    } catch (error) {
+      console.log("Something went wrong", error);
       toast.error("Something went wrong");
     } finally {
       setLoading(false);
@@ -85,7 +86,8 @@ export const SizeForm: React.FC<SizeFormProps> = ({ initialData }) => {
       router.refresh();
       router.push(`/${params.storeId}/sizes`);
       toast.success("Sizes Deleted Successfully.");
-    } catch {
+    } catch (error) {
+      console.log("Something went wrong", error);
       toast.error("Make sure you deleted all product from the Size first.");
     } finally {
       setLoading(false);
