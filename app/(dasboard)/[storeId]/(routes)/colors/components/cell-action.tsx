@@ -13,7 +13,6 @@ import { ColorColumn } from "./column";
 import { Copy, Edit, MoreHorizontal, Trash } from "lucide-react";
 import toast from "react-hot-toast";
 import { useParams, useRouter } from "next/navigation";
-import prismadb from "@/lib/prismadb";
 import { useState } from "react";
 import axios from "axios";
 import { AlertModal } from "@/components/models/alert-modal";

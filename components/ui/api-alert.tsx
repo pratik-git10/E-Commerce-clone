@@ -1,6 +1,6 @@
 "use client";
 
-import { Check, Clipboard, Copy, Server } from "lucide-react";
+import { Check, Clipboard, Server } from "lucide-react";
 import { Alert, AlertDescription, AlertTitle } from "./alert";
 import { Badge, BadgeProps } from "@/components/ui/badge";
 import { Button } from "./button";
