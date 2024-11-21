@@ -9,7 +9,7 @@ This project is an E-Commerce platform built with [`create-next-app`](https://ne
 - **Backend**: Node.js, Express
 - **Database**: MySQL
 - **API**: REST API
-- **Authentication**: NextAuth.js (JWT and OAuth) / clerk auth(https://clerk.com/)
+- **Authentication**: clerk auth(https://clerk.com/)
 
 ## Features
 
@@ -27,7 +27,7 @@ This project is an E-Commerce platform built with [`create-next-app`](https://ne
 
 - A single backend API that supports multiple stores, making it easy to scale and manage multiple e-commerce sites with the same backend.
 
-### For development purpose
+<!-- For development purpose -->
 
 <!-- npm run dev -->
 <!-- npx prisma generate -->
