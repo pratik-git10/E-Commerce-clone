@@ -42,7 +42,7 @@ export const CellAction: React.FC<CellActionProps> = ({ data }) => {
       router.refresh();
 
       toast.success("Product Deleted Successfully.");
-    } catch (error) {
+    } catch {
       toast.error("Something went wrong.");
     } finally {
       setLoading(false);
